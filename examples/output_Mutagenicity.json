@@ -1,0 +1,6 @@
+{
+  "model_name": "ML4chemistry/Toxicity_Prediction_of_Ames_test",
+  "score": 0.9974,
+  "flag": true,
+  "organ": "mutagenicity"
+}

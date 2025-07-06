@@ -1,0 +1,25 @@
+[
+  {
+    "toxicity_flag": false,
+    "organ_systems_flagged": [],
+    "num_models_flagged": 1,
+    "model_scores": {
+      "DeepTox": 0.48,
+      "hERG_Karim-CNN": null,
+      "Mutagenicity": 0.18
+    },
+    "confidence_flag": "low"
+  },
+  {
+    "toxicity_flag": false,
+    "organ_systems_flagged": [],
+    "num_models_flagged": 0,
+    "model_scores": {
+      "DeepTox": null,
+      "hERG_Karim-CNN": null,
+      "Mutagenicity": null
+    },
+    "error": "Invalid SMILES string provided.",
+    "confidence_flag": "low"
+  }
+] 
