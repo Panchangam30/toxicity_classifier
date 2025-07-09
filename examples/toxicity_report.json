@@ -1,14 +1,10 @@
 {
   "toxicity_flag": false,
-  "organ_systems_flagged": [
-    "mutagenicity",
-    "general"
-  ],
-  "num_models_flagged": 2,
+  "organ_systems_flagged": [],
+  "num_models_flagged": 0,
   "model_scores": {
-    "ML4chemistry/Toxicity_Prediction_of_Ames_test": 0.9974,
-    "mikemayuare/SMILY-BPE-tox21": 0.8143,
-    "hERG_Karim-CNN": 0.0004770267114508897
-  },
-  "confidence_flag": "low"
+    "ML4chemistry/Toxicity_Prediction_of_Ames_test": 0.0099,
+    "mikemayuare/SMILY-BPE-tox21": 0.2711,
+    "hERG_Karim-CNN": 0.0010042034555226564
+  }
 }

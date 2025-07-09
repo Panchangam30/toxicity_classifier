@@ -2,43 +2,35 @@
   "model_results": [
     {
       "model_name": "ML4chemistry/Toxicity_Prediction_of_Ames_test",
-      "score": 0.9974,
-      "flag": true,
+      "score": 0.0099,
+      "flag": false,
       "organ": "mutagenicity"
     },
     {
       "model_name": "mikemayuare/SMILY-BPE-tox21",
-      "score": 0.8143,
-      "flag": true,
+      "score": 0.2711,
+      "flag": false,
       "organ": "general"
     },
     {
       "toxicity_flag": false,
       "organ_systems_flagged": [],
-      "num_models_flagged": 2,
+      "num_models_flagged": 0,
       "model_scores": {
-        "ML4chemistry/Toxicity_Prediction_of_Ames_test": 0.9974,
-        "mikemayuare/SMILY-BPE-tox21": 0.8143,
-        "hERG_Karim-CNN": 0.0004770267114508897
-      },
-      "confidence_flag": "low"
+        "ML4chemistry/Toxicity_Prediction_of_Ames_test": 0.0099,
+        "mikemayuare/SMILY-BPE-tox21": 0.2711,
+        "hERG_Karim-CNN": 0.0010042034555226564
+      }
     },
     {
       "model_name": "hERG_Karim-CNN",
-      "score": 0.0004770267114508897,
+      "score": 0.0010042034555226564,
       "flag": false,
       "organ": "heart"
     }
   ],
-  "flagged_models": 2,
+  "flagged_models": 0,
   "toxicity_flag": false,
-  "organ_risks": {
-    "mutagenicity": [
-      "ML4chemistry/Toxicity_Prediction_of_Ames_test"
-    ],
-    "general": [
-      "mikemayuare/SMILY-BPE-tox21"
-    ]
-  },
+  "organ_risks": {},
   "low_confidence_models": []
 }
