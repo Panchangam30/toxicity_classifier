@@ -1,5 +1,11 @@
-# Mitochondrial Toxicity Module Stub
+# Mitochondrial Toxicity Module
+import numpy as np
 
 def predict_mitochondrial_toxicity(descriptors):
-    # TODO: Implement mitochondrial toxicity model
-    return {"mitochondrial_toxicity": None} 
+    """
+    Mocked mitochondrial toxicity prediction.
+    Returns a risk value (0-1).
+    TODO: Replace with real model prediction (e.g., MITO-Tox).
+    """
+    mitochondrial_toxicity = float(np.random.uniform(0, 1))
+    return {"mitochondrial_toxicity": mitochondrial_toxicity} 

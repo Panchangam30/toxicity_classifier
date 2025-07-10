@@ -1,5 +1,11 @@
-# Immunotoxicity Module Stub
+# Immunotoxicity Module
+import numpy as np
 
 def predict_immunotoxicity(descriptors):
-    # TODO: Implement immunotoxicity model
-    return {"immunotoxicity": None} 
+    """
+    Mocked immunotoxicity prediction.
+    Returns a risk value (0-1).
+    TODO: Replace with real model prediction or immune-related data.
+    """
+    immunotoxicity = float(np.random.uniform(0, 1))
+    return {"immunotoxicity": immunotoxicity} 
