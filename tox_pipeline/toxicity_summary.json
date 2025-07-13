@@ -1,0 +1,30 @@
+{
+  "composite_score": 0.37719948232579714,
+  "organ_toxicity": {
+    "cardiotoxicity": 0.8502685967009389,
+    "hepatotoxicity": 0.9132820940999556
+  },
+  "neurotoxicity": 0.9255316154478053,
+  "mitochondrial_toxicity": 0.4500247060978133,
+  "tissue_accumulation": {
+    "liver": "low",
+    "brain": "high"
+  },
+  "morphological_cytotoxicity": 0.6312732801099438,
+  "immunotoxicity": 0.751060329464998,
+  "structural_alerts": [],
+  "carcinogenicity": {
+    "prediction": 0,
+    "probability": 0.59
+  },
+  "toxcast": {
+    "prediction": 0,
+    "probability": 0.9674320816993713
+  },
+  "flags": [
+    "high hepatotoxicity",
+    "high cardiotoxicity",
+    "high tissue accumulation"
+  ],
+  "model_confidence": 0.38335830089485046
+}

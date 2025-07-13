@@ -1,9 +1,9 @@
 # Main entry script for the toxicity & safety pipeline
 from modules.input_preprocessing import process_input
 from modules.structural_alerts import check_structural_alerts
-from modules.general_toxicity import predict_general_toxicity
+from modules.general_toxicity import predict_carcinogenicity, predict_toxcast
 from modules.organ_toxicity import predict_organ_toxicity
-from modules.neurotoxicity import predict_neurotoxicity
+from modules.neurotoxicity import predict_cns_toxicity_converge
 from modules.mitochondrial_toxicity import predict_mitochondrial_toxicity
 from modules.tissue_accumulation import predict_tissue_accumulation
 from modules.morphological_cytotoxicity import predict_morphological_cytotoxicity
@@ -19,16 +19,20 @@ def run_pipeline(smiles):
     descriptors = input_data["descriptors"]
 
     # 2. Structural Alerts
-    alerts = check_structural_alerts(molecule)
+    alerts = check_structural_alerts(smiles)
 
     # 3. General Toxicity
-    general_tox = predict_general_toxicity(descriptors)
+    # general_tox = predict_general_toxicity(descriptors)
+    general_tox = {
+        "carcinogenicity": predict_carcinogenicity(smiles),
+        "toxcast": predict_toxcast(smiles)
+    }
 
     # 4. Organ-Specific Toxicity
     organ_tox = predict_organ_toxicity(descriptors)
 
     # 5. Neurotoxicity
-    neurotox = predict_neurotoxicity(descriptors)
+    neurotox = predict_cns_toxicity_converge(descriptors)
 
     # 6. Mitochondrial Toxicity
     mito_tox = predict_mitochondrial_toxicity(descriptors)
@@ -73,13 +77,14 @@ def run_pipeline(smiles):
             "cardiotoxicity": organ_tox.get("cardiotoxicity"),
             "hepatotoxicity": organ_tox.get("hepatotoxicity")
         },
-        "neurotoxicity": neurotox.get("neurotoxicity"),
+        "neurotoxicity": neurotox.get("CNS_toxicity_CONVERGE"),
         "mitochondrial_toxicity": mito_tox.get("mitochondrial_toxicity"),
         "tissue_accumulation": accumulation,
         "morphological_cytotoxicity": morpho_tox.get("morphological_cytotoxicity"),
         "immunotoxicity": immunotox.get("immunotoxicity"),
-        "structural_alerts": alerts.get("alerts"),
-        "ld50": general_tox.get("ld50"),
+        "structural_alerts": alerts,
+        "carcinogenicity": general_tox["carcinogenicity"],
+        "toxcast": general_tox["toxcast"],
         "flags": scoring.get("flags", []),
         "model_confidence": explain.get("model_confidence"),
     }
@@ -87,8 +92,12 @@ def run_pipeline(smiles):
 
 
 if __name__ == "__main__":
-    # Example usage
-    smiles = "CCO"  # Ethanol as a placeholder
+    smiles = input("Enter a SMILES string: ")
     result = run_pipeline(smiles)
     import json
-    print(json.dumps(result, indent=2)) 
+    
+    print(json.dumps(result, indent=2))
+    
+    # Save to file
+    with open("tox_pipeline/toxicity_summary.json", "w") as f:
+        json.dump(result, f, indent=2) 

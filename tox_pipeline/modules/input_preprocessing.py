@@ -10,14 +10,14 @@ def process_input(smiles):
     """
     mol = Chem.MolFromSmiles(smiles)
     if mol is None:
-        # Invalid SMILES
+       
         return {"molecule": None, "descriptors": {}, "error": "Invalid SMILES string."}
 
-    # MACCS keys (166 bits)
+    
     maccs_fp = MACCSkeys.GenMACCSKeys(mol)
     maccs_bits = list(maccs_fp)
 
-    # ECFP (Morgan fingerprint, radius=2, 2048 bits)
+   
     ecfp_fp = AllChem.GetMorganFingerprintAsBitVect(mol, radius=2, nBits=2048)
     ecfp_bits = list(ecfp_fp)
 

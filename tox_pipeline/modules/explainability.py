@@ -1,6 +1,6 @@
-# Explainability & Confidence Module
 import numpy as np
 
+# TODO: Replace with real explainability/confidence logic
 def get_explainability_and_confidence(module_outputs):
     """
     Mocked explainability and confidence output.
@@ -8,5 +8,5 @@ def get_explainability_and_confidence(module_outputs):
     TODO: Replace with real confidence and disagreement logic.
     """
     model_confidence = float(np.random.uniform(0, 1))
-    disagreements = []  # TODO: Compute real disagreements between modules
+    disagreements = []  
     return {"model_confidence": model_confidence, "disagreements": disagreements} 

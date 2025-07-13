@@ -1,0 +1,33 @@
+# Core scientific and ML stack
+numpy
+scikit-learn
+joblib
+
+# Chemistry toolkit
+rdkit
+
+# Deep learning and image models (for organ toxicity stubs)
+torch
+pillow
+
+# Vision models and transforms
+# (used in organ_toxicity.py for H-optimus-0 and UNI stubs)
+timm
+torchvision
+
+# Hugging Face Hub (for model downloads)
+huggingface_hub
+
+# Optional: If you use pandas for data handling (not required by current code)
+# pandas
+
+# If you use XGBoost or LightGBM for any models
+# xgboost
+# lightgbm
+
+# If you use matplotlib or seaborn for plotting (not required by current code)
+# matplotlib
+# seaborn
+
+# For compatibility (pin numpy <2.0 for RDKit)
+numpy<2.0 
