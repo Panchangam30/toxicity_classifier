@@ -1,31 +1,34 @@
 {
-  "composite_score": 0.31942000163277384,
+  "composite_score": 0.44598764214376374,
   "organ_toxicity": {
-    "cardiotoxicity": 0.7425072599651659,
-    "hepatotoxicity": 0.2112830967120809
+    "cardiotoxicity": 0.20464588347891455,
+    "hepatotoxicity": 0.3367060277142476
   },
-  "neurotoxicity": 0.3091263074954459,
-  "mitochondrial_toxicity": 0.14607231306093105,
+  "neurotoxicity": 0.06472514485224645,
+  "mitochondrial_toxicity": 0.7695174606823554,
   "tissue_accumulation": {
     "liver": "high",
-    "brain": "low"
+    "brain": "high"
   },
-  "morphological_cytotoxicity": 0.8203366397564789,
-  "immunotoxicity": 0.7513860315157546,
-  "structural_alerts": [],
-  "structural_alert_count": 0,
+  "morphological_cytotoxicity": 0.8528823353407673,
+  "immunotoxicity": 0.9270198683480363,
+  "structural_alerts": [
+    "BRENK: BRENK_A"
+  ],
+  "structural_alert_count": 1,
   "carcinogenicity": {
     "prediction": 0,
-    "probability": 0.59
+    "probability": 0.77
   },
   "toxcast": {
     "prediction": 0,
-    "probability": 0.9674320816993713
+    "probability": 0.9038476347923279
   },
-  "ld50": 377.2952229377687,
+  "ld50": 115.27526491761706,
   "flags": [
     "morphological concern",
-    "high tissue accumulation"
+    "high tissue accumulation",
+    "structural alert present"
   ],
-  "model_confidence": 0.5460046995613785
+  "model_confidence": 0.7995089118515627
 }
