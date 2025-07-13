@@ -16,4 +16,5 @@ def predict_morphological_cytotoxicity(descriptors):
     # morphological_cytotoxicity = float(morpho_model.predict_proba(X)[0, 1])
     """
     morphological_cytotoxicity = float(np.random.uniform(0, 1))
-    return {"morphological_cytotoxicity": morphological_cytotoxicity} 
+    confidence = float(np.random.uniform(0, 1))
+    return {"morphological_cytotoxicity": morphological_cytotoxicity, "confidence": confidence} 

@@ -16,4 +16,5 @@ def predict_immunotoxicity(descriptors):
     # immunotoxicity = float(immuno_model.predict_proba(X)[0, 1])
     """
     immunotoxicity = float(np.random.uniform(0, 1))
-    return {"immunotoxicity": immunotoxicity} 
+    confidence = float(np.random.uniform(0, 1))
+    return {"immunotoxicity": immunotoxicity, "confidence": confidence} 

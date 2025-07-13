@@ -56,6 +56,15 @@ A JSON file (`tox_pipeline/toxicity_summary.json`) and console output with field
 - composite_score
 - organ_toxicity, neurotoxicity, mitochondrial_toxicity, tissue_accumulation, morphological_cytotoxicity, immunotoxicity
 - structural_alerts, carcinogenicity, toxcast, flags, model_confidence
+- ld50 (stubbed)
+- module_confidence (per-module confidence values)
+- disagreements (list of modules with prediction disagreement)
+
+## Per-Module Confidence & Disagreement Tracking
+
+- `module_confidence`: A dictionary with confidence values for each module. For real models, this is the model's probability/confidence; for stubs, it is a random value.
+- `disagreements`: A list of modules where multiple models/methods disagree. Currently, this is tracked for organ toxicity: if both H-optimus-0 and UNI features are present and their means differ by more than 0.2, 'organ_toxicity' is added to the list.
+- These fields are included in the output JSON to support interpretability and future model integration.
 
 ## Modules
 

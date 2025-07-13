@@ -16,4 +16,5 @@ def predict_mitochondrial_toxicity(descriptors):
     # mitochondrial_toxicity = float(mito_model.predict_proba(X)[0, 1])
     """
     mitochondrial_toxicity = float(np.random.uniform(0, 1))
-    return {"mitochondrial_toxicity": mitochondrial_toxicity} 
+    confidence = float(np.random.uniform(0, 1))
+    return {"mitochondrial_toxicity": mitochondrial_toxicity, "confidence": confidence} 

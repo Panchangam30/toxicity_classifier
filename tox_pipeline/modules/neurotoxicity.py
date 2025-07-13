@@ -16,4 +16,5 @@ def predict_cns_toxicity_converge(descriptors):
     # cns_toxicity = float(converge_model.predict_proba(X)[0, 1])
     """
     cns_toxicity = float(np.random.uniform(0, 1))
-    return {"CNS_toxicity_CONVERGE": cns_toxicity} 
+    confidence = float(np.random.uniform(0, 1))
+    return {"CNS_toxicity_CONVERGE": cns_toxicity, "confidence": confidence} 
