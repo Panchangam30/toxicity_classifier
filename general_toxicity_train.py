@@ -2,7 +2,7 @@
 
 from tdc.single_pred import Tox
 from rdkit import Chem
-from rdkit.Chem import AllChem
+from rdkit.Chem import rdMolDescriptors
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
@@ -17,7 +17,7 @@ def smiles_to_ecfp(smiles, radius=2, n_bits=2048):
     mol = Chem.MolFromSmiles(smiles)
     if mol is None:
         return np.zeros(n_bits)
-    return np.array(AllChem.GetMorganFingerprintAsBitVect(mol, radius, nBits=n_bits))
+    return np.array(rdMolDescriptors.GetMorganFingerprintAsBitVect(mol, radius, nBits=n_bits))
 
 def name_to_smiles_opsin_web(name):
     try:

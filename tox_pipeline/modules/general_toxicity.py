@@ -2,7 +2,7 @@
 import joblib
 import numpy as np
 from rdkit import Chem
-from rdkit.Chem import AllChem
+from rdkit.Chem import rdMolDescriptors
 import os
 
 # --- Featurization ---
@@ -14,7 +14,7 @@ def smiles_to_ecfp(smiles, radius=2, n_bits=2048):
     mol = Chem.MolFromSmiles(smiles)
     if mol is None:
         return np.zeros(n_bits)
-    return np.array(AllChem.GetMorganFingerprintAsBitVect(mol, radius, nBits=n_bits))
+    return np.array(rdMolDescriptors.GetMorganFingerprintAsBitVect(mol, radius, nBits=n_bits))
 
 # --- Model Loading ---
 # Always resolve model paths from the project root

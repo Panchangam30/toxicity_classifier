@@ -1,0 +1,22 @@
+name: toxenv
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - rdkit
+  - numpy<2.0
+  - scikit-learn
+  - pip
+  - pip:
+      - joblib
+      - torch
+      - pillow
+      - timm
+      - torchvision
+      - huggingface_hub
+      # Optional: Uncomment if you use these
+      # - pandas
+      # - xgboost
+      # - lightgbm
+      # - matplotlib
+      # - seaborn

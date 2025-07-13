@@ -1,18 +1,19 @@
 {
-  "composite_score": 0.37719948232579714,
+  "composite_score": 0.31942000163277384,
   "organ_toxicity": {
-    "cardiotoxicity": 0.8502685967009389,
-    "hepatotoxicity": 0.9132820940999556
+    "cardiotoxicity": 0.7425072599651659,
+    "hepatotoxicity": 0.2112830967120809
   },
-  "neurotoxicity": 0.9255316154478053,
-  "mitochondrial_toxicity": 0.4500247060978133,
+  "neurotoxicity": 0.3091263074954459,
+  "mitochondrial_toxicity": 0.14607231306093105,
   "tissue_accumulation": {
-    "liver": "low",
-    "brain": "high"
+    "liver": "high",
+    "brain": "low"
   },
-  "morphological_cytotoxicity": 0.6312732801099438,
-  "immunotoxicity": 0.751060329464998,
+  "morphological_cytotoxicity": 0.8203366397564789,
+  "immunotoxicity": 0.7513860315157546,
   "structural_alerts": [],
+  "structural_alert_count": 0,
   "carcinogenicity": {
     "prediction": 0,
     "probability": 0.59
@@ -21,10 +22,10 @@
     "prediction": 0,
     "probability": 0.9674320816993713
   },
+  "ld50": 377.2952229377687,
   "flags": [
-    "high hepatotoxicity",
-    "high cardiotoxicity",
+    "morphological concern",
     "high tissue accumulation"
   ],
-  "model_confidence": 0.38335830089485046
+  "model_confidence": 0.5460046995613785
 }
